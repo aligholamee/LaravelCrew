@@ -9,4 +9,7 @@ class Permission extends Model
     // Configure the model
     protected $table = 'permission';
     public $primary_key = 'uuid';
+
+    // Define the relationships
+    
 }

@@ -9,4 +9,10 @@ class Role_Permission extends Model
     // Configure the model
     protected $table = 'role_permission';
     public $primary_key = 'uuid';
+
+    // Define the relationships
+    public function permission() {
+      // Each row of the role_permission table has one permission
+      $this -> hasOne('permission');
+    }
 }
