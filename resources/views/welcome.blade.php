@@ -6,15 +6,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>Arda Guard</title>
-
         <!-- Fonts -->
         <link href="https://fonts.googleapis.cxom/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
         <!-- Le styles -->
-        <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-        <link href="assets/css/font-awesome.min.css" rel="stylesheet">
-        <link href="assets/css/style.css" rel="stylesheet">
-        <link href="assets/css/animate.css" rel="stylesheet">
-        <link href="assets/css/skin-blue.css" rel="stylesheet">
+        <link href="{{ URL::asset('/css/bootstrap.min.css') }}" rel="stylesheet">
+        <link href="{{ URL::asset('/css/font-awesome.min.css') }}" rel="stylesheet">
+        <link href="{{ URL::asset('/css/style.css') }}" rel="stylesheet">
+        <link href="{{ URL::asset('/css/animate.css') }}" rel="stylesheet">
+        <link href="{{ URL::asset('/css/skin-blue.css') }}" rel="stylesheet">
         <!-- Styles -->
         <style>
             html, body {
@@ -586,16 +585,16 @@
     <!-- Le javascript
         ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="assets/js/jquery.min.js" type="text/javascript"></script>
-    <script src="assets/js/bootstrap.js"></script>
-    <script src="assets/js/jquery.parallax-1.1.3.js" type="text/javascript"></script>
-    <script src="assets/js/jquery.localscroll-1.2.7-min.js" type="text/javascript"></script>
-    <script src="assets/js/jquery.scrollTo-1.4.6-min.js" type="text/javascript"></script>
-    <script src="assets/js/jquery.bxslider.min.js"></script>
-    <script src="assets/js/jquery.placeholder.js"></script>
-    <script src="assets/js/modernizr.custom.js"></script>
-    <script src="assets/js/toucheffects.js"></script>
-    <script src="assets/js/animations.js"></script>
-    <script src="assets/js/init.js"></script>
+    <script src="/resources/assets/js/jquery.min.js" type="text/javascript"></script>
+    <script src="/resources/assets/js/bootstrap.js"></script>
+    <script src="/resources/assets/js/jquery.parallax-1.1.3.js" type="text/javascript"></script>
+    <script src="/resources/assets/js/jquery.localscroll-1.2.7-min.js" type="text/javascript"></script>
+    <script src="/resources/assets/js/jquery.scrollTo-1.4.6-min.js" type="text/javascript"></script>
+    <script src="/resources/assets/js/jquery.bxslider.min.js"></script>
+    <script src="/resources/assets/js/jquery.placeholder.js"></script>
+    <script src="/resources/assets/js/modernizr.custom.js"></script>
+    <script src="/resources/assets/js/toucheffects.js"></script>
+    <script src="/resources/assets/js/animations.js"></script>
+    <script src="/resources/assets/js/init.js"></script>
     </body>
 </html>
