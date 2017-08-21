@@ -10,8 +10,12 @@ class Door extends Model
     protected $table = 'door';
     public $primary_key = 'uuid';
 
-    // Relationships
-    /* public function house() {
-      $this->belongsTo('house')
-    } */
+    // Define the relationships here
+    public function house() {
+      $this -> belongsToMany('house');
+    }
+
+    public function door() {
+      $this -> belongsTo('User');
+    }
 }
