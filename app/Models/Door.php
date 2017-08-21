@@ -12,14 +12,16 @@ class Door extends Model
 
     // Define the relationships here
     public function house() {
-      $this -> belongsToMany('house');
+      $this -> belongsTo('house');
     }
 
-    public function door() {
-      $this -> belongsTo('user');
+    public function user() {
+      // This can be 1(Client) or many(Client + It's guests)
+      $this -> belongsToMany('user');
     }
 
     public function user_door() {
+      // In that table each user is assigned to one door respectively
       $this -> belongsTo('user_door');
     }
 }
