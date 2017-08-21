@@ -4,9 +4,9 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class House extends Model
+class User_Door extends Model
 {
     // Configure the model
-    protected $table = 'house';
+    protected $table = 'user_door';
     public $primary_key = 'uuid';
 }
