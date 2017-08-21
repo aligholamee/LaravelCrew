@@ -24,7 +24,10 @@ return [
     |--------------------------------------------------------------------------
     |
     | Next, you may define every authentication guard for your application.
-    | Of course, a great default configuration has been defined for you
+    | Of course, a great default public function __construct(Type $foo = null)
+    {
+      $this->foo = $foo;
+    }figuration has been defined for you
     | here which uses session storage and the Eloquent user provider.
     |
     | All authentication drivers have a user provider. This defines how the
