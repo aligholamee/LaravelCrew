@@ -11,5 +11,15 @@ class House extends Model
     public $primary_key = 'uuid';
 
     // Define the relationships
-    public function 
+    public function user() {
+      $this -> belongsTo('user');
+    }
+
+    public function door() {
+      $this -> hasMany('door');
+    }
+
+    public function user_house() {
+      $this -> belongsTo('user_house');
+    }
 }
