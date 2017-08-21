@@ -11,5 +11,8 @@ class Permission extends Model
     public $primary_key = 'uuid';
 
     // Define the relationships
-    
+    public function role_permission() {
+      $this -> belongsTo('role_permission');
+    }
+
 }
