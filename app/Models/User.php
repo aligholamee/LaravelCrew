@@ -6,6 +6,26 @@ use Illuminate\Database\Eloquent\Model;
 
 class User extends Model
 {
+    use Notifiable;
+
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = [
+        'name', 'username', 'email', 'number'
+    ];
+
+    /**
+     * The attributes that should be hidden for arrays.
+     *
+     * @var array
+     */
+    protected $hidden = [
+        'password', 'remember_token',
+    ];
+
     // Configure the model
     protected $table = 'user';
     public $primary_key = 'uuid';
