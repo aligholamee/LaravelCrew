@@ -12,10 +12,10 @@ class Token extends Model
 
     // Define relationships here
     public function generator_user() {
-      $this -> belongsTo('user');
+      $this -> hasOne('user');
     }
 
     public function consumer_user() {
-      $this -> belongsTo('user');
+      $this -> hasOne('user');
     }
 }
