@@ -16,6 +16,10 @@ class Door extends Model
     }
 
     public function door() {
-      $this -> belongsTo('User');
+      $this -> belongsTo('user');
+    }
+
+    public function user_door() {
+      $this -> belongsTo('user_door');
     }
 }
