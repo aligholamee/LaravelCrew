@@ -15,4 +15,9 @@ class Role_Permission extends Model
       // Each row of the role_permission table has one permission
       $this -> hasOne('permission');
     }
+
+    public function role() {
+      // Each row of the role_permission table has one role
+      $this -> hasOne('role');
+    }
 }
