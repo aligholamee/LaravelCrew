@@ -9,7 +9,12 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.cxom/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-
+        <!-- Le styles -->
+        <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+        <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+        <link href="assets/css/style.css" rel="stylesheet">
+        <link href="assets/css/animate.css" rel="stylesheet">
+        <link href="assets/css/skin-blue.css" rel="stylesheet">
         <!-- Styles -->
         <style>
             html, body {
