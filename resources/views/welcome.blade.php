@@ -13,6 +13,7 @@
         <!-- Styles -->
         <style>
             html, body {
+                background-image:url("http://uupload.ir/files/zwez_arda.jpg");
                 background-color: #fff;
                 color: #636b6f;
                 font-family: 'Raleway', sans-serif;
@@ -43,6 +44,7 @@
 
             .content {
                 text-align: center;
+                color: #fafafa
             }
 
             .title {
@@ -79,15 +81,13 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    Arda Security
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a href="{{ URL::to('admin/login') }}">Login</a>
+                    <a href="{{ URL::to('admin/regiser') }}">Register</a>
+                    <a href="{{ URL::to('docs') }}">About Arda</a>
                 </div>
             </div>
         </div>
