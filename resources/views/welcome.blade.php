@@ -86,7 +86,7 @@
 
                 <div class="links">
                     <a href="{{ URL::to('admin/login') }}">Login</a>
-                    <a href="{{ URL::to('admin/regiser') }}">Register</a>
+                    <a href="{{ URL::to('admin/register') }}">Register</a>
                     <a href="{{ URL::to('docs') }}">About Arda</a>
                 </div>
             </div>
