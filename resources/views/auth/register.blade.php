@@ -42,7 +42,7 @@
                             <label for="number" class="col-md-4 control-label">Phone Number</label>
 
                             <div class="col-md-6">
-                                <input id="number" class="form-control" name="number" value="{{ old('email') }}" required>
+                                <input id="number" class="form-control" name="number" value="{{ old('number') }}" required>
 
                                 @if ($errors->has('number'))
                                     <span class="help-block">
