@@ -183,7 +183,6 @@ return [
         Backpack\CRUD\CrudServiceProvider::class,
         Backpack\PermissionManager\PermissionManagerServiceProvider::class,
         Backpack\MenuCRUD\MenuCRUDServiceProvider::class,
-
     ],
 
     /*
