@@ -45,7 +45,6 @@
 
             .content {
                 text-align: center;
-                color: #fafafa
             }
 
             .title {
@@ -53,17 +52,19 @@
             }
 
             .links > a {
-                color: #636b6f;
-                padding: 0 25px;
+                color: white;
+                padding: 15px 30px;
                 font-size: 12px;
                 font-weight: 600;
                 letter-spacing: .1rem;
                 text-decoration: none;
                 text-transform: uppercase;
+                background-color: rgba(20, 20, 26, 0.5);
             }
 
             .m-b-md {
                 margin-bottom: 30px;
+                color: #fafafa
             }
         </style>
     </head>
@@ -73,9 +74,6 @@
                 <div class="top-right links">
                     @if (Auth::check())
                         <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ url('/login') }}">Login</a>
-                        <a href="{{ url('/register') }}">Register</a>
                     @endif
                 </div>
             @endif
