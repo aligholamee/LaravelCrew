@@ -96,11 +96,6 @@
       <!-- /.content-wrapper -->
 
       <footer class="main-footer">
-        @if (config('backpack.base.show_powered_by'))
-            <div class="pull-right hidden-xs">
-              {{ trans('backpack::base.powered_by') }} <a target="_blank" href="http://backpackforlaravel.com?ref=panel_footer_link">Backpack for Laravel</a>
-            </div>
-        @endif
         {{ trans('backpack::base.handcrafted_by') }} <a target="_blank" href="{{ config('backpack.base.developer_link') }}">{{ config('backpack.base.developer_name') }}</a>.
       </footer>
     </div>
@@ -139,7 +134,7 @@
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                 }
             });
-            
+
         // Set active state on menu element
         var current_url = "{{ Request::fullUrl() }}";
         var full_url = current_url+location.search;
@@ -154,7 +149,7 @@
                 function() { return $(this).attr('href').startsWith(current_url) || current_url.startsWith($(this).attr('href')); }
             );
         }
-        
+
         $curentPageLink.parents('li').addClass('active');
         {{-- Enable deep link to tab --}}
         var activeTab = $('[href="' + location.hash.replace("#", "#tab_") + '"]');

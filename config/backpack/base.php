@@ -16,13 +16,13 @@ return [
 
     // Menu logos
     'logo_lg'   => '<b>Arda</b>Security',
-    'logo_mini' => '<b>B</b>p',
+    'logo_mini' => '<b>A</b>S',
 
     // Developer or company name. Shown in footer.
     'developer_name' => 'Ali Gholami',
 
     // Developer website. Link in footer.
-    'developer_link' => 'http://tabacitu.ro',
+    'developer_link' => 'http://aligholamee.com',
 
     // Show powered by Laravel Backpack in the footer?
     'show_powered_by' => true,
