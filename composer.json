@@ -9,6 +9,7 @@
         "backpack/MenuCRUD": "^1.0",
         "backpack/base": "^0.7.22",
         "backpack/crud": "^3.2",
+        "backpack/pagemanager": "^1.1",
         "backpack/permissionmanager": "^2.1",
         "laravel/framework": "5.4.*",
         "laravel/tinker": "~1.0"
