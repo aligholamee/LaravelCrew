@@ -1,5 +1,5 @@
-@extends('master')
+@extends('backpack::layout')
 
-@section('content')
+@section('header')
     //
 @stop

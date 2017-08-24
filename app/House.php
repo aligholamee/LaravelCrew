@@ -17,7 +17,7 @@ class House extends Model
      *
      * @var string
      */
-    // protected $table = 'houses';
+     protected $table = 'house';
 
     /**
      * The primary key for the model.

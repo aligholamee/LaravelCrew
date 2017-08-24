@@ -19,6 +19,8 @@
           <li class="header">{{ trans('backpack::base.administration') }}</li>
           <!-- ================================================ -->
           <!-- ==== Recommended place for admin menu items ==== -->
+          <!-- Users, Roles Permissions -->
+          <li><a href="{{ url(config('backpack.base.route_prefix', 'admin').'/house') }}"><i class="fa fa-home"></i> <span>House Management</span></a></li>
           <!-- ================================================ -->
           <li><a href="{{ url(config('backpack.base.route_prefix', 'admin').'/dashboard') }}"><i class="fa fa-dashboard"></i> <span>{{ trans('backpack::base.dashboard') }}</span></a></li>
           <!-- Users, Roles Permissions -->
@@ -30,7 +32,6 @@
                 <li><a href="{{ url(config('backpack.base.route_prefix', 'admin') . '/permission') }}"><i class="fa fa-key"></i> <span>Permissions</span></a></li>
               </ul>
             </li>
-
           <!-- ======================================= -->
           <li class="header">{{ trans('backpack::base.user') }}</li>
           <li><a href="{{ url(config('backpack.base.route_prefix', 'admin').'/logout') }}"><i class="fa fa-sign-out"></i> <span>{{ trans('backpack::base.logout') }}</span></a></li>

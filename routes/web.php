@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('admin/house', ['uses' => 'Admin\HouseCrudController@index'])
+    ->where(['page' => '^((?!admin).)*$', 'subs' => '.*']);
