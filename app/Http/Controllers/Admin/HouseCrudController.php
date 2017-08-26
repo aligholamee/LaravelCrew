@@ -120,6 +120,6 @@ class HouseCrudController extends CrudController
 
     public function index() {
       $houses = House::all();
-      return view('House');
+      return view('home');
     }
 }
