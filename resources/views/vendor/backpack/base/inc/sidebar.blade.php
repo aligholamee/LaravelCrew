@@ -19,6 +19,8 @@
           <li class="header">{{ trans('backpack::base.administration') }}</li>
           <!-- ================================================ -->
           <!-- ==== Recommended place for admin menu items ==== -->
+          <!-- ================================================ -->
+          <li><a href="{{ url('admin/House') }}"><i class="fa fa-tag"></i> <span>Manage Houses</span></a></li>
           <!-- Users, Roles Permissions -->
               <!-- ================================================ -->
           <li><a href="{{ url(config('backpack.base.route_prefix', 'admin').'/dashboard') }}"><i class="fa fa-dashboard"></i> <span>{{ trans('backpack::base.dashboard') }}</span></a></li>
