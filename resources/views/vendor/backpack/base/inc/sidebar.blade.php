@@ -20,8 +20,7 @@
           <!-- ================================================ -->
           <!-- ==== Recommended place for admin menu items ==== -->
           <!-- Users, Roles Permissions -->
-          <li><a href="{{ url(config('backpack.base.route_prefix', 'admin').'/house') }}"><i class="fa fa-home"></i> <span>House Management</span></a></li>
-          <!-- ================================================ -->
+              <!-- ================================================ -->
           <li><a href="{{ url(config('backpack.base.route_prefix', 'admin').'/dashboard') }}"><i class="fa fa-dashboard"></i> <span>{{ trans('backpack::base.dashboard') }}</span></a></li>
           <!-- Users, Roles Permissions -->
             <li class="treeview">

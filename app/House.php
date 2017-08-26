@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Backpack\CRUD\CrudTrait;
 
 class House extends Model
 {
@@ -11,7 +12,7 @@ class House extends Model
     | GLOBAL VARIABLES
     |--------------------------------------------------------------------------
     */
-
+    use CrudTrait;
     /**
      * The table associated with the model.
      *
