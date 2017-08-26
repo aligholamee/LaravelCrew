@@ -117,9 +117,4 @@ class HouseCrudController extends CrudController
         // use $this->data['entry'] or $this->crud->entry
         return $redirect_location;
     }
-
-    public function index() {
-      $houses = House::all();
-      return view('home');
-    }
 }
