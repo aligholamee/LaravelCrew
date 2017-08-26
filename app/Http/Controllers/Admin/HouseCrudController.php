@@ -20,8 +20,8 @@ class HouseCrudController extends CrudController
         |--------------------------------------------------------------------------
         */
         $this->crud->setModel('App\House');
-        $this->crud->setRoute(config('backpack.base.route_prefix') . '/house');
-        $this->crud->setEntityNameStrings('house', 'house');
+        $this->crud->setRoute(config('backpack.base.route_prefix') . '/House');
+        $this->crud->setEntityNameStrings('House', 'House');
 
         /*
         |--------------------------------------------------------------------------
