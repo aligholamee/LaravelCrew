@@ -104,7 +104,7 @@ class HouseCrudController extends CrudController
 
     public function store(StoreRequest $request)
     {
-        $request->user_uuid = Auth::user()->uuid;
+        $request['user_uuid'] = Auth::user()->uuid;
         // your additional operations before save here
         $redirect_location = parent::storeCrud($request);
         // your additional operations after save here
