@@ -1,17 +1,21 @@
 <?php
 
 namespace App;
-
+use Alsofronie\Uuid\UuidModelTrait;
 use Illuminate\Database\Eloquent\Model;
 use Backpack\CRUD\CrudTrait;
 
 class Door extends Model
 {
+    // Optimized uuid
+    private static $uuidOptimization = true;
+
      /*
     |--------------------------------------------------------------------------
     | GLOBAL VARIABLES
     |--------------------------------------------------------------------------
     */
+    use UuidModelTrait;
     use CrudTrait;
     /**
      * The table associated with the model.
