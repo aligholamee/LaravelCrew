@@ -1,7 +1,7 @@
 <?php
 
 namespace App;
-
+use Alsofronie\Uuid\UuidModelTrait;
 use Illuminate\Database\Eloquent\Model;
 use Backpack\CRUD\CrudTrait;
 
@@ -12,6 +12,7 @@ class House extends Model
     | GLOBAL VARIABLES
     |--------------------------------------------------------------------------
     */
+    use UuidModelTrait;
     use CrudTrait;
     /**
      * The table associated with the model.
