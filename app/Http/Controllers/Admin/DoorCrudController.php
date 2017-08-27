@@ -98,6 +98,7 @@ class DoorCrudController extends CrudController
         // $this->crud->orderBy();
         // $this->crud->groupBy();
         // $this->crud->limit();
+        $this->crud->addClause('where', 'house_uuid', '==', $house_uuid);
     }
 
     public function store(StoreRequest $request)
