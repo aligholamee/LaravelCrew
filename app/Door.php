@@ -73,8 +73,12 @@ class Door extends Model
     | RELATIONS
     |--------------------------------------------------------------------------
     */
-    public function user() {
-      return $this->hasOne('House');
+    public function house() {
+      return $this->belongsTo('House');
+    }
+
+    public function user_door() {
+      return $this->belongsTo('user_door');
     }
 
     /*
