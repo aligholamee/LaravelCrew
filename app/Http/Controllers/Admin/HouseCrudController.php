@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use Backpack\CRUD\app\Http\Controllers\CrudController;
-
+use Illuminate\Support\Facades\Auth;
 // VALIDATION: change the requests to match your own file names if you need form validation
 use App\Http\Requests\HouseCrudRequest as StoreRequest;
 use App\Http\Requests\HouseCrudRequest as UpdateRequest;
@@ -11,7 +11,7 @@ use App\House;
 
 class HouseCrudController extends CrudController
 {
-    public function setup($user_uuid = null)
+    public function setup()
     {
 
         /*
@@ -98,6 +98,7 @@ class HouseCrudController extends CrudController
         // $this->crud->orderBy();
         // $this->crud->groupBy();
         // $this->crud->limit();
+        $user_uuid = Auth::user()->user_uuid;
         $this->crud->addClause('where', 'user_uuid', '=', $user_uuid);
     }
 
