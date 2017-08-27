@@ -2,9 +2,8 @@
 	@if (!$crud->model->translationEnabled())
 			<!-- Single edit button -->
 			<a href="{{ url($crud->route.'/'.$entry->getKey().'/edit') }}" class="btn btn-xs btn-default"><i class="fa fa-edit"></i> {{ trans('backpack::crud.edit') }}</a>
-		
 		@if ($crud->entity_name == 'House')
-			<a href="{{ url(config('backpack.base.route_prefix'), 'Door') }}" class="btn btn-xs btn-default"><i class="fa fa-edit"></i> Manage Doors </a>
+			<a href="{{ url(config('backpack.base.route_prefix'), 'Door') }}?house_uuid={{$entry->uuid}}" class="btn btn-xs btn-default"><i class="fa fa-edit"></i> Manage Doors </a>
 		@endif 	
 
 	@else
