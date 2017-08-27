@@ -11,7 +11,7 @@ use App\House;
 
 class DoorCrudController extends CrudController
 {
-    public function setup()
+    public function setup($house_uuid = null)
     {
 
         /*
