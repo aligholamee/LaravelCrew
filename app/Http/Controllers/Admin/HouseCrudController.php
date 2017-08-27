@@ -98,12 +98,13 @@ class HouseCrudController extends CrudController
         // $this->crud->orderBy();
         // $this->crud->groupBy();
         // $this->crud->limit();
-        $user_uuid = Auth::user()->user_uuid;
+        $user_uuid = Auth::user()->uuid;
         $this->crud->addClause('where', 'user_uuid', '=', $user_uuid);
     }
 
     public function store(StoreRequest $request)
     {
+        $request->user_uuid = Auth::user()->uuid;
         // your additional operations before save here
         $redirect_location = parent::storeCrud($request);
         // your additional operations after save here
