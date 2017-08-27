@@ -11,7 +11,7 @@ use App\House;
 
 class HouseCrudController extends CrudController
 {
-    public function setup()
+    public function setup($user_uuid = null)
     {
 
         /*
@@ -98,6 +98,7 @@ class HouseCrudController extends CrudController
         // $this->crud->orderBy();
         // $this->crud->groupBy();
         // $this->crud->limit();
+        $this->crud->addClause('where', 'house_uuid', '=', $house_uuid);
     }
 
     public function store(StoreRequest $request)
