@@ -20,7 +20,6 @@
           <!-- ================================================ -->
           <!-- ==== Recommended place for admin menu items ==== -->
           <!-- ================================================ -->
-          <li><a href="{{ url('admin/Door') }}"><i class="fa fa-tag"></i> <span>Manage Doors</span></a></li>
           <li><a href="{{ url('admin/House') }}"><i class="fa fa-tag"></i> <span>Manage Houses</span></a></li>
           <!-- Users, Roles Permissions -->
               <!-- ================================================ -->
