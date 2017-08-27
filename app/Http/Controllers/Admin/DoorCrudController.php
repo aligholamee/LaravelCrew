@@ -5,8 +5,10 @@ namespace App\Http\Controllers\Admin;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 
 // VALIDATION: change the requests to match your own file names if you need form validation
-use App\Http\Requests\DoorCrudRequest as StoreRequest;
+use Ramsey\Uuid\Exception\UnsatisfiedDependencyException;
 use App\Http\Requests\DoorCrudRequest as UpdateRequest;
+use App\Http\Requests\DoorCrudRequest as StoreRequest;
+use Ramsey\Uuid\Uuid;
 use App\House;
 
 class DoorCrudController extends CrudController
@@ -98,7 +100,7 @@ class DoorCrudController extends CrudController
         // $this->crud->orderBy();
         // $this->crud->groupBy();
         // $this->crud->limit();
-        $this->crud->addClause('where', 'house_uuid', '=', '{$house_uuid}');
+        $this->crud->addClause('where', 'house_uuid', '=', '{$house_uuid->toString()}');
     }
 
     public function store(StoreRequest $request)
