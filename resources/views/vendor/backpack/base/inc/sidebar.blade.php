@@ -14,7 +14,7 @@
           </div>
         </div>
         <!-- sidebar menu: : style can be found in sidebar.less -->
-                  @role('Admin')
+      
         <ul class="sidebar-menu">
           <li class="header">{{ trans('backpack::base.administration') }}</li>
           <!-- ================================================ -->
@@ -37,7 +37,6 @@
           <li class="header">{{ trans('backpack::base.user') }}</li>
           <li><a href="{{ url(config('backpack.base.route_prefix', 'admin').'/logout') }}"><i class="fa fa-sign-out"></i> <span>{{ trans('backpack::base.logout') }}</span></a></li>
         </ul>
-                  @endrole
       </section>
       <!-- /.sidebar -->
     </aside>
