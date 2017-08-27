@@ -74,9 +74,12 @@ class House extends Model
     |--------------------------------------------------------------------------
     */
     public function user() {
-      return $this->hasOne('User');
+      return $this->belongsTo('User');
     }
 
+    public function Door() {
+      return $this->hasOne('Door');
+    }
     /*
     |--------------------------------------------------------------------------
     | SCOPES
