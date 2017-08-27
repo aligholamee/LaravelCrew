@@ -23,6 +23,13 @@ class User extends Authenticatable
         'name', 'email', 'password',
     ];
 
+        /**
+     * The primary key for the model.
+     *
+     * @var string
+     */
+     protected $primaryKey = 'uuid';
+     
     /**
      * The attributes that should be hidden for arrays.
      *
