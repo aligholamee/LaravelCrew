@@ -118,6 +118,9 @@ class TokenCrudController extends CrudController
         // Initialize the value available on the session we just created :)
         $request['value'] = session('value');
 
+        // Store the current user auth session to the generator_uuid
+        $request['generator_uuid'] = Auth::user()->uuid;
+
         // your additional operations before save here
         $redirect_location = parent::storeCrud($request);
         // your additional operations after save here
