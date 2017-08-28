@@ -5,7 +5,10 @@
 		@if ($crud->entity_name == 'House')
 			<a href="{{ url(config('backpack.base.route_prefix'), 'Door') }}?house_uuid={{$entry->uuid}}" class="btn btn-xs btn-default"><i class="fa fa-edit"></i> Manage Doors </a>
 		@endif 	
-
+		@if ($crud->entity == 'Door')
+		<a href="{{ url(config('backpack.base.route_prefix'), 'Door') }}?house_uuid={{$entry->uuid}}" class="btn btn-xs btn-default"><i class="fa fa-edit"></i> Generate Token </a>
+		@endif
+		
 	@else
 	<!-- Edit button group -->
 	<div class="btn-group">
