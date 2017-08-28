@@ -9,9 +9,9 @@ use App\Http\Requests\TokenCrudRequest as StoreRequest;
 use App\Http\Requests\TokenCrudRequest as UpdateRequest;
 use App\Token;
 
-class HouseCrudController extends CrudController
+class TokenCrudController extends CrudController
 {
-    public function setup()
+    public function setup($door_uuid = null)
     {
 
         /*
