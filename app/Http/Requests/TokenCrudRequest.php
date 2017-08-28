@@ -23,7 +23,6 @@ class TokenCrudRequest extends \Backpack\CRUD\app\Http\Requests\CrudRequest {
     public function rules()
     {
         return [
-            'name' => 'required',
             'start_date' => 'required',
             'end_date' => 'required',
         ];

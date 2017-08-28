@@ -98,13 +98,22 @@ class TokenCrudController extends CrudController
         // $this->crud->orderBy();
         // $this->crud->groupBy();
         // $this->crud->limit();
+        // Generate the token
+        $new_token_value = rand(121212,989898);
+        // Save the token inside our session
+        session(['value' => $new_token_value]);
         $user_uuid = Auth::user()->uuid;
         $this->crud->addClause('where', 'door_uuid', '=', $door_uuid);
     }
 
     public function store(StoreRequest $request)
     {
+        // Initialize the door_uuid
         $request['door_uuid'] = Auth::door()->uuid;
+
+        // Initialize the value available on the session we just created :)
+        $request['value'] = session('value');
+
         // your additional operations before save here
         $redirect_location = parent::storeCrud($request);
         // your additional operations after save here

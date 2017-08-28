@@ -22,7 +22,7 @@ class Token extends Model
      *
      * @var string
      */
-     protected $table = 'door';
+     protected $table = 'token';
 
     /**
      * The primary key for the model.
@@ -86,7 +86,7 @@ class Token extends Model
         return $this->belongsTo('User');
     }
 
-    public function door() {
+    public function door_uuid() {
       return $this->belongsTo('Door');
     }
 
