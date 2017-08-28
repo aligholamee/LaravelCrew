@@ -110,10 +110,9 @@ class TokenCrudController extends CrudController
     {
         // Initialize the door_uuid
         $request['door_uuid'] = session('door_uuid');
-
         // Initialize the value available on the session we just created :)
         $request['value'] = rand(121212,989898);
-
+        
         // Store the current user auth session to the generator_uuid
         $request['generator_uuid'] = Auth::user()->uuid;
 
