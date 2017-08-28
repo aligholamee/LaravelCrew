@@ -43,7 +43,7 @@ class Door extends Model
      *
      * @var array
      */
-    // protected $guarded = ['id'];
+     //protected $guarded = [];
 
     /**
      * The attributes that are mass assignable.

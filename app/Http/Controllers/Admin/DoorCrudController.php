@@ -3,11 +3,11 @@
 namespace App\Http\Controllers\Admin;
 
 use Backpack\CRUD\app\Http\Controllers\CrudController;
-
+use Illuminate\Support\Facades\Auth;
 // VALIDATION: change the requests to match your own file names if you need form validation
 use App\Http\Requests\DoorCrudRequest as UpdateRequest;
 use App\Http\Requests\DoorCrudRequest as StoreRequest;
-use App\House;
+use App\Door;
 
 class DoorCrudController extends CrudController
 {
@@ -103,6 +103,7 @@ class DoorCrudController extends CrudController
 
     public function store(StoreRequest $request)
     {
+        $request['house_uuid'] = Auth::house()->uuid;
         // your additional operations before save here
         $redirect_location = parent::storeCrud($request);
         // your additional operations after save here

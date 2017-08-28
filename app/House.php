@@ -47,7 +47,7 @@ class House extends Model
      *
      * @var array
      */
-     protected $fillable = ['name', 'comment', 'address'];
+     protected $fillable = ['name', 'comment', 'address', 'user_uuid'];
 
     /**
      * The attributes that should be hidden for arrays
