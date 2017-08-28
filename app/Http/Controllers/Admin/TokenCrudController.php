@@ -99,20 +99,23 @@ class TokenCrudController extends CrudController
         // $this->crud->groupBy();
         // $this->crud->limit();
         
+        //dd('k',$door_uuid);
         // Save the parameter inside our session
         session(['door_uuid' => $door_uuid]);
-
+        
+        
         // Simply show the tokens for the current door_uuid
         $this->crud->addClause('where', 'door_uuid', '=', $door_uuid);
     }
 
     public function store(StoreRequest $request)
     {
+        //dd('k',session('door_uuid'));
         // Initialize the door_uuid
         $request['door_uuid'] = session('door_uuid');
         // Initialize the value available on the session we just created :)
         $request['value'] = rand(121212,989898);
-        
+
         // Store the current user auth session to the generator_uuid
         $request['generator_uuid'] = Auth::user()->uuid;
 
