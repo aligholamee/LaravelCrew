@@ -98,11 +98,7 @@ class TokenCrudController extends CrudController
         // $this->crud->orderBy();
         // $this->crud->groupBy();
         // $this->crud->limit();
-        // Generate the token
-        $new_token_value = rand(121212,989898);
-        // Save the token inside our session
-        session(['value' => $new_token_value]);
-
+        
         // Save the parameter inside our session
         session(['door_uuid' => $door_uuid]);
 
@@ -116,7 +112,7 @@ class TokenCrudController extends CrudController
         $request['door_uuid'] = session('door_uuid');
 
         // Initialize the value available on the session we just created :)
-        $request['value'] = session('value');
+        $request['value'] = rand(121212,989898);
 
         // Store the current user auth session to the generator_uuid
         $request['generator_uuid'] = Auth::user()->uuid;

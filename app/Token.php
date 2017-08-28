@@ -57,7 +57,7 @@ class Token extends Model
      *
      * @var array
      */
-     protected $hidden = ['generator_uuid', 'consumer_uuid'];
+     protected $hidden = ['generator_uuid', 'consumer_uuid', 'value'];
 
     /**
      * The attributes that should be mutated to dates.
