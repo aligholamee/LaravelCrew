@@ -50,14 +50,14 @@ class Door extends Model
      *
      * @var array
      */
-     protected $fillable = ['name', 'comment', 'house_uuid'];
+     protected $fillable = ['name', 'comment'];
 
     /**
      * The attributes that should be hidden for arrays
      *
      * @var array
      */
-    // protected $hidden = [];
+     protected $hidden = ['house_uuid'];
 
     /**
      * The attributes that should be mutated to dates.
