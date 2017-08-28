@@ -50,14 +50,14 @@ class Token extends Model
      *  
      * @var array
      */
-     protected $fillable = ['start_date', 'end_date', 'generator_uuid', 'consumer_uuid'];
+     protected $fillable = ['start_date', 'end_date'];
 
     /**
      * The attributes that should be hidden for arrays
      *
      * @var array
      */
-    // protected $hidden = [];
+     protected $hidden = ['generator_uuid', 'consumer_uuid'];
 
     /**
      * The attributes that should be mutated to dates.

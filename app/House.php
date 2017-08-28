@@ -54,7 +54,7 @@ class House extends Model
      *
      * @var array
      */
-    // protected $hidden = [];
+     protected $hidden = ['user_uuid'];
 
     /**
      * The attributes that should be mutated to dates.
