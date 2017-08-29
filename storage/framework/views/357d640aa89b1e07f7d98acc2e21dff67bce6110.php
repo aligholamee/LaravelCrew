@@ -15,9 +15,14 @@
         $field['value'] = $_GET['door_uuid'];
          ?>
      <?php endif; ?>
-    <?php if($field['name'] == 'Generator_uuid'): ?>
+    <?php if($field['name'] == 'generator_uuid'): ?>
         <?php 
         $field['value'] = Auth::user()->uuid;
+         ?>
+    <?php endif; ?>
+    <?php if($field['name'] == 'value'): ?>
+        <?php 
+        $field['value'] = rand(121212,898989);
          ?>
     <?php endif; ?>
     <!-- load the view from the application if it exists, otherwise load the one in the package -->
