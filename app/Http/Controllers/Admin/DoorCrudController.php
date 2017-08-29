@@ -13,7 +13,6 @@ class DoorCrudController extends CrudController
 {
     public function setup($house_uuid = null)
     {
-
         /*
         |--------------------------------------------------------------------------
         | BASIC CRUD INFORMATION
@@ -98,7 +97,7 @@ class DoorCrudController extends CrudController
         // $this->crud->orderBy();
         // $this->crud->groupBy();
         // $this->crud->limit();
-
+        dd('k', $house_uuid);
         // Save the session 
         $this->crud->addClause('where', 'house_uuid', '=', $house_uuid);
     }
@@ -109,7 +108,11 @@ class DoorCrudController extends CrudController
         $redirect_location = parent::storeCrud($request);
         // your additional operations after save here
         // use $this->data['entry'] or $this->crud->entry
-        return $redirect_location;
+        /*
+        $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+        $results = $actual_link.'?house_uuid='.$request['house_uuid'];
+        */
+        return redirect('admin/Door?house_uuid='.$request['house_uuid']);
     }
 
     public function update(UpdateRequest $request)
