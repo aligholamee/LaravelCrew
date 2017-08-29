@@ -31,4 +31,13 @@
     @else
         @include('crud::fields.'.$field['type'], array('field' => $field))
     @endif
+    
 @endforeach
+
+@foreach ($fields as $field)
+<div>
+    @include('crud::fields.checkbox')   
+</div>
+
+@endforeach
+
