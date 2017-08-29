@@ -4,7 +4,18 @@
         @php
         $field['value'] = $_GET['house_uuid'];
         @endphp
-    @elseif($field['name'] == 'user_uuid')
+    @endif
+    @if($field['name'] == 'user_uuid')
+        @php
+        $field['value'] = Auth::user()->uuid;
+        @endphp
+    @endif
+    @if($field['name'] == 'door_uuid')
+        @php
+        $field['value'] = $_GET['door_uuid'];
+        @endphp
+     @endif
+    @if($field['name'] == 'Generator_uuid')
         @php
         $field['value'] = Auth::user()->uuid;
         @endphp
