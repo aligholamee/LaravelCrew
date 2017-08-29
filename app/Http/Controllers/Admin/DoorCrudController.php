@@ -97,12 +97,18 @@ class DoorCrudController extends CrudController
         // $this->crud->orderBy();
         // $this->crud->groupBy();
         // $this->crud->limit();
-        // Save the session 
-        $this->crud->addClause('where', 'house_uuid', '=', $_GET['house_uuid']);
+        // Save the session
+
+        // User assurance for the doors
+
+        // House assurance for the doors
+
+        //$this->crud->addClause('where', 'house_uuid', '=', $_GET['house_uuid']);
     }
 
     public function store(StoreRequest $request)
     {
+        // Add the house uuid to this!
         // your additional operations before save here
         $redirect_location = parent::storeCrud($request);
         // your additional operations after save here
