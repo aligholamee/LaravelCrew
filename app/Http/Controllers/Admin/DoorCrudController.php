@@ -11,7 +11,7 @@ use App\Door;
 
 class DoorCrudController extends CrudController
 {
-    public function setup($house_uuid = null)
+    public function setup()
     {
         /*
         |--------------------------------------------------------------------------
@@ -97,9 +97,8 @@ class DoorCrudController extends CrudController
         // $this->crud->orderBy();
         // $this->crud->groupBy();
         // $this->crud->limit();
-        dd('k', $house_uuid);
         // Save the session 
-        $this->crud->addClause('where', 'house_uuid', '=', $house_uuid);
+        $this->crud->addClause('where', 'house_uuid', '=', $_GET['house_uuid']);
     }
 
     public function store(StoreRequest $request)
