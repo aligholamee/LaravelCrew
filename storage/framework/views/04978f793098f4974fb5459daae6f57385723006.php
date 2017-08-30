@@ -6,8 +6,9 @@
 			<a href="<?php echo e(url(config('backpack.base.route_prefix'), 'Door')); ?>?house_uuid=<?php echo e($entry->uuid); ?>" class="btn btn-xs btn-default"><i class="fa fa-edit"></i> Manage Doors </a>
 		<?php endif; ?> 	
 		<?php if($crud->entity_name == 'Door'): ?>
-		<a href="<?php echo e(url(config('backpack.base.route_prefix'), 'Token')); ?>" class="btn btn-xs btn-default"><i class="fa fa-edit"></i> Manage Tokens </a>
-    <?php endif; ?>
+		<a href="<?php echo e(url(config('backpack.base.route_prefix'), 'Token')); ?>?door_uuid=<?php echo e($entry->uuid); ?>" class="btn btn-xs btn-default"><i class="fa fa-edit"></i> Generate Token </a>
+		<?php endif; ?>
+		
 	<?php else: ?>
 	<!-- Edit button group -->
 	<div class="btn-group">

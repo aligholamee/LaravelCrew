@@ -1,14 +1,14 @@
 @if ($crud->hasAccess('update'))
 	@if (!$crud->model->translationEnabled())
 			<!-- Single edit button -->
-		@if ($crud->entity_name == 'House')
-			<a href="{{ url(config('backpack.base.route_prefix'), 'Door') }}?house_uuid={{$entry->uuid}}" class="btn btn-xs btn-default"><i class="fa fa-edit"></i> Manage Doors </a>	
-		@elseif ($crud->entity_name == 'Door')
-		<a href="{{ url(config('backpack.base.route_prefix'), 'Token') }}?door_uuid={{$entry->uuid}}" class="btn btn-xs btn-default"><i class="fa fa-edit"></i> Manage Tokens </a>
-    @else
 			<a href="{{ url($crud->route.'/'.$entry->getKey().'/edit') }}" class="btn btn-xs btn-default"><i class="fa fa-edit"></i> {{ trans('backpack::crud.edit') }}</a>
+		@if ($crud->entity_name == 'House')
+			<a href="{{ url(config('backpack.base.route_prefix'), 'Door') }}?house_uuid={{$entry->uuid}}" class="btn btn-xs btn-default"><i class="fa fa-edit"></i> Manage Doors </a>
+		@endif 	
+		@if ($crud->entity_name == 'Door')
+		<a href="{{ url(config('backpack.base.route_prefix'), 'Token') }}?door_uuid={{$entry->uuid}}" class="btn btn-xs btn-default"><i class="fa fa-edit"></i> Generate Token </a>
 		@endif
-
+		
 	@else
 	<!-- Edit button group -->
 	<div class="btn-group">
