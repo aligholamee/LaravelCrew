@@ -1,4 +1,25 @@
 <!-- text input -->
+@if($field['name'] == 'house_uuid' || $field['name'] == 'user_uuid' || $field['name'] == 'generator_uuid' ||
+$field['name'] == 'door_uuid')
+    <div @include('crud::inc.field_wrapper_attributes') >
+
+    @if(isset($field['prefix']) || isset($field['suffix'])) <div class="input-group"> @endif
+        @if(isset($field['prefix'])) <div class="input-group-addon">{!! $field['prefix'] !!}</div> @endif
+        <input
+        type="hidden"
+            name="{{ $field['name'] }}"
+            value="{{ old($field['name']) ? old($field['name']) : (isset($field['value']) ? $field['value'] : (isset($field['default']) ? $field['default'] : '' )) }}"
+            @include('crud::inc.field_attributes')
+        >
+        @if(isset($field['suffix'])) <div class="input-group-addon">{!! $field['suffix'] !!}</div> @endif
+    @if(isset($field['prefix']) || isset($field['suffix'])) </div> @endif
+
+    {{-- HINT --}}
+    @if (isset($field['hint']))
+        <p class="help-block">{!! $field['hint'] !!}</p>
+    @endif
+</div>
+@else
 <div @include('crud::inc.field_wrapper_attributes') >
     <label>{!! $field['label'] !!}</label>
     @include('crud::inc.field_translatable_icon')
@@ -19,7 +40,7 @@
         <p class="help-block">{!! $field['hint'] !!}</p>
     @endif
 </div>
-
+@endif
 
 {{-- FIELD EXTRA CSS  --}}
 {{-- push things in the after_styles section --}}
