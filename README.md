@@ -13,8 +13,10 @@
 9. Fix token editing.                                                           -> Done                              
 10. Fix the first house deleting error.
 11. Fix the door editing.                                                       -> Done
-12. UI Improvements.
+12. UI Improvements.                                                            -> Done
 13. Settings Section.
 14. Fix door creating redirects.                                                -> Done
+
+
 
 

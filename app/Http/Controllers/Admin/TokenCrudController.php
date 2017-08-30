@@ -34,8 +34,8 @@ class TokenCrudController extends CrudController
         $this->crud->addField([
             'label'     => 'Select your client :)',
             'type'      => 'checklist',
-            'name'      => 'Token',
-            'entity'    => 'user',
+            'name'      => 'users',
+            'entity'    => 'users',
             'attribute' => 'name',
             'model'     => "app\User",
             'pivot'     => true,
