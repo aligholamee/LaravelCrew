@@ -115,6 +115,8 @@ class TokenCrudController extends CrudController
         
         // Simply show the tokens for the current door_uuid
         //$this->crud->addClause('where', 'door_uuid', '=', $door_uuid);
+        $user_uuid = Auth::user()->uuid;
+        $this->crud->addClause('where', 'user_uuid', '=', $user_uuid);
     }
 
     public function store(StoreRequest $request)

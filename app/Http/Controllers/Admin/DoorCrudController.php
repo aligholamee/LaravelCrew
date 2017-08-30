@@ -104,6 +104,8 @@ class DoorCrudController extends CrudController
         // House assurance for the doors
 
         //$this->crud->addClause('where', 'house_uuid', '=', $_GET['house_uuid']);
+        $user_uuid = Auth::user()->uuid;
+        $this->crud->addClause('where', 'user_uuid', '=', $user_uuid);
     }
 
     public function store(StoreRequest $request)
