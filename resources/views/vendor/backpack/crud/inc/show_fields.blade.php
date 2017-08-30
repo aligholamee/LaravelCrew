@@ -10,7 +10,7 @@
         $field['value'] = Auth::user()->uuid;
         @endphp
     @endif
-    @if($field['name'] == 'door_uuid')
+    @if($field['name'] == 'door_uuid' && array_key_exists('door_uuid', $_GET))
         @php
         $field['value'] = $_GET['door_uuid'];
         @endphp
