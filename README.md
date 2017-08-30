@@ -13,7 +13,8 @@
 9. Fix token editing.
 10. Fix the first house deleting error.
 11. Fix the door editing.
-
+12. UI Improvements.
+13. Settings Section.(User's Profile)
 
 
 
