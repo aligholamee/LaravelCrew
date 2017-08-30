@@ -1,6 +1,6 @@
 {{-- Show the inputs --}}
 @foreach ($fields as $field)
-    @if($field['name'] == 'house_uuid')
+    @if($field['name'] == 'house_uuid' && array_key_exists('house_uuid', $_GET))
         @php
         $field['value'] = $_GET['house_uuid'];
         @endphp

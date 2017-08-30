@@ -1,6 +1,6 @@
 
 <?php $__currentLoopData = $fields; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $field): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-    <?php if($field['name'] == 'house_uuid'): ?>
+    <?php if($field['name'] == 'house_uuid' && array_key_exists('house_uuid', $_GET)): ?>
         <?php 
         $field['value'] = $_GET['house_uuid'];
          ?>
