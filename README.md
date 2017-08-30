@@ -15,6 +15,6 @@
 11. Fix the door editing.                                                       -> Done
 12. UI Improvements.
 13. Settings Section.
-14. Fix door creating redirects.    
+14. Fix door creating redirects.                                                -> Done
 
 

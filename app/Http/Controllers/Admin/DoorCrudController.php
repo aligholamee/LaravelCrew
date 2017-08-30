@@ -126,6 +126,6 @@ class DoorCrudController extends CrudController
         $redirect_location = parent::updateCrud($request);
         // your additional operations after save here
         // use $this->data['entry'] or $this->crud->entry
-        return $redirect_location;
+        return redirect('admin/Door?house_uuid='.$request['house_uuid']);
     }
 }
