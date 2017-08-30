@@ -11,5 +11,9 @@
 7. Display the tokens only created for the current door.
 8. Fix the token generation query builder error.(But it does generate it!)
 9. Fix token editing.
-10. Never can delete the first house.
+10. Fix the first house deleting error.
 11. Fix the door editing.
+
+
+
+
