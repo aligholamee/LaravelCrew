@@ -30,7 +30,26 @@ class TokenCrudController extends CrudController
         */
 
         $this->crud->setFromDb();
+        
+        $this->crud->addField([
+            'label'     => 'Select your client :)',
+            'type'      => 'checklist',
+            'name'      => 'consumer_uuid',
+            'entity'    => 'consumer_uuid',
+            'attribute' => 'consumer_uuid',
+            'model'     => "app\Token",
+            'pivot'     => true,
+        ]);
 
+        if (!config('backpack.permissionmanager.allow_permission_create')) {
+            $this->crud->denyAccess('create');
+        }
+        if (!config('backpack.permissionmanager.allow_permission_update')) {
+            $this->crud->denyAccess('update');
+        }
+        if (!config('backpack.permissionmanager.allow_permission_delete')) {
+            $this->crud->denyAccess('delete');
+        }
         // ------ CRUD FIELDS
         // $this->crud->addField($options, 'update/create/both');
         // $this->crud->addFields($array_of_arrays, 'update/create/both');
