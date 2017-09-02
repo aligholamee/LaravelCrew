@@ -34,11 +34,11 @@ class TokenCrudController extends CrudController
         $this->crud->addField([
             'label'     => 'Select your client :)',
             'type'      => 'checklist',
-            'name'      => 'users',
-            'entity'    => 'users',
-            'attribute' => 'name',
-            'model'     => "app\User",
-            'pivot'     => true,
+            'name'      => 'User',  // the method that defines the relationship in your Model
+            'entity'    => 'User',  // the method that defines the relationship in your Model
+            'attribute' => 'name', // foreign key attribute that is shown to user
+            'model'     => "app\User", // foreign key model
+            'pivot'     => true,    // on create&update, do you need to add/delete pivot table entries?]
         ]);
         // ------ CRUD FIELDS
         // $this->crud->addField($options, 'update/create/both');
@@ -134,7 +134,7 @@ class TokenCrudController extends CrudController
         $redirect_location = parent::storeCrud($request);
         // your additional operations after save here
         // use $this->data['entry'] or $this->crud->entry
-        return $redirect_location;
+        return redirect('admin/Token?door_uuid='.$request['door_uuid']);
     }
 
     public function update(UpdateRequest $request)
