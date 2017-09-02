@@ -43,6 +43,10 @@ class User extends Authenticatable
     public function house() {
         $this->hasMany('House');
     } 
+
+    public function Token() {
+        $this->hasOne('Token');
+    }
     
      /**
      * Send the password reset notification.
