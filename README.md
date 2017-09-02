@@ -1,7 +1,7 @@
 ## Laravel Crew
 
 
-### Todo: 8/30/2017
+### Todo: 30/08/2017
 1. Capability to add houses for the specific user by the admin.
 2. Fix Back to All doors section in the door generating forms.
 3. Fix the order of forms in the door creating section                          -> Done
@@ -17,6 +17,13 @@
 13. Settings Section.
 14. Fix door creating redirects.                                                -> Done
 
-
-
+### Todo: 2/09/2017
+1. Capability to add houses for the specific user by the admin.
+2. Fix Back to All doors section in the door generating forms.
+3. Display the tokens only created for the current door.
+4. Display the doors only created for the current house.
+5. Display the tokens only created for the current door.
+6. Fix the token generation query builder error.(But it does generate it!)
+7. Fix the first house deleting error.
+8. Settings Section.
 
