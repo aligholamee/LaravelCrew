@@ -78,7 +78,7 @@ class Token extends Model
     |--------------------------------------------------------------------------
     */
 
-    public function user() {
+    public function generator_user() {
         return $this->belongsTo('User');
     }
 
