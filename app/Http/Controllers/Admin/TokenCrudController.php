@@ -113,10 +113,16 @@ class TokenCrudController extends CrudController
         //session(['door_uuid' => $door_uuid]);
         
         
+        if(array_key_exists('door_uuid', $_GET)) {
+            // There exists a door_uuid
+            // Do this!
+            $this->crud->addClause('where', 'door_uuid', '=', $_GET['door_uuid']);
+        }
         // Simply show the tokens for the current door_uuid
         //$this->crud->addClause('where', 'door_uuid', '=', $door_uuid);
-        $user_uuid = Auth::user()->uuid;
-        $this->crud->addClause('where', 'user_uuid', '=', $user_uuid);
+
+        //$user_uuid = Auth::user()->uuid;
+       //$this->crud->addClause('where', 'user_uuid', '=', $user_uuid);
     }
 
     public function store(StoreRequest $request)
