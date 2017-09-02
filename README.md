@@ -20,10 +20,9 @@
 ### Todo: 2/09/2017
 1. Capability to add houses for the specific user by the admin. 
 2. Fix Back to All doors section in the door generating forms.
-3. Display the tokens only created for the current door.
+3. Display the tokens only created for the current door.                    -> Done 
 4. Display the doors only created for the current house.                    -> Done
-5. Display the tokens only created for the current door.
-6. Fix the token generation query builder error.(But it does generate it!)
-7. Fix the first house deleting error.
-8. Settings Section.
+5. Fix the token generation query builder error.(But it does generate it!)
+6. Fix the first house deleting error.
+7. Settings Section.
 
