@@ -34,10 +34,10 @@ class TokenCrudController extends CrudController
         $this->crud->addField([
             'label'     => 'Select your client :)',
             'type'      => 'checklist',
-            'name'      => 'generator_user',  // the method that defines the relationship in your Model
-            'entity'    => 'generator_user',  // the method that defines the relationship in your Model
+            'name'      => 'user',  // the method that defines the relationship in your Model
+            'entity'    => 'user',  // the method that defines the relationship in your Model
             'attribute' => 'name', // foreign key attribute that is shown to user
-            'model'     => "User", // foreign key model
+            'model'     => "app\user", // foreign key model
             'pivot'     => true,    // on create&update, do you need to add/delete pivot table entries?]
         ]);
         // ------ CRUD FIELDS

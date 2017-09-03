@@ -89,6 +89,10 @@ class Token extends Model
     public function door_token() {
       return $this->belongsTo('door_token');
     }
+    
+    public function user() {
+      return $this->belongsTo('user');
+    }
 
     /*
     |--------------------------------------------------------------------------
