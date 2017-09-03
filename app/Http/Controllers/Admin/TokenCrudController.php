@@ -155,7 +155,6 @@ class TokenCrudController extends CrudController
         $decryptedToken = base64_decode($encryptedToken);
         $deserializedToken = explode('.', $decryptedToken);
 
-
         // Query database for validaton
         // Returns a 2D array
         $validationResultLength = Token::where('door_uuid', $deserializedToken[0])->where('value', $deserializedToken[1])->whereRaw('now() > start_date AND now() < end_date')->count();
