@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Auth;
 // VALIDATION: change the requests to match your own file names if you need form validation
 use App\Http\Requests\TokenCrudRequest as StoreRequest;
 use App\Http\Requests\TokenCrudRequest as UpdateRequest;
+use Illuminate\Http\Request;
 use App\Token;
 
 class TokenCrudController extends CrudController

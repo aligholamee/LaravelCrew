@@ -30,7 +30,7 @@
 ### Todo: 3/09/2017
 1. Define a route for the API.
 2. API Controller and Function.
-3. Grab the token, decryot the token and return the result.
+3. Grab the token, decrypt the token and return the result.
 
 
 

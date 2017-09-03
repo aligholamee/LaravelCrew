@@ -16,4 +16,4 @@ Route::get('/', function () {
 });
 
 
-Route::get('/api', 'TokenCrudController@validateToken');
+Route::get('/api', 'Admin\TokenCrudController@validateToken');
