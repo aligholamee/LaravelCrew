@@ -146,5 +146,12 @@ class TokenCrudController extends CrudController
         return $redirect_location;
     }
 
-
+    // Vaidate the token
+    public function validateToken(Request $request) {
+        $encryptedToken = $request['token'];
+        // Token has 3 parts:
+        // Door_uuid.Timestamp.Token_value
+        $decryptedToken = base64_decode($encryptedToken);
+        $deserializedToken = explode('.', $decryptedToken);
+    }
 }
