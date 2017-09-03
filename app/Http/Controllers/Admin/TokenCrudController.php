@@ -157,7 +157,8 @@ class TokenCrudController extends CrudController
 
         // Query database for validaton
         // Returns a 2D array
-        $validationResultLength = Token::where('door_uuid', $deserializedToken[1])->where('value', $deserializedToken[0])->whereRaw('now() > start_date AND now() < end_date')->count();
+        $validationResultLength = Token::where('door_uuid', $deserializedToken[1])->where('value', $deserializedToken[0])->whereRaw('now() > start_date AND now() < end_date')->get();
+
         if($validationResultLength == 0)
             // Invalid 
             return json_encode(false);
