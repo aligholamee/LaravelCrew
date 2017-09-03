@@ -157,6 +157,8 @@ class TokenCrudController extends CrudController
 
         // Query database for validaton
         // Returns a 2D array
-        $validationResult = App\Token::where('door_uuid', $deserializedToken[0])->where('value')->get();
+        $validationResult = App\Token::where('door_uuid', $deserializedToken[0])->where('value', $deserializedToken[1])->get();
+        
+   
     }
 }
