@@ -1,7 +1,7 @@
 var requestedValue = '641509';
 var requestedDoorUuid = 'cb0dc199-f45f-4522-be7c-ee4add1e9e6c';
 var generatedToken = requestedValue + requestedDoorUuid;
-postman.setEnvironmentVariable(base64url(generatedToken));
+postman.setEnvironmentVariable('token',base64url(generatedToken));
 
 function base64url(input) {
     var base64String = btoa(input);
