@@ -150,8 +150,13 @@ class TokenCrudController extends CrudController
     public function validateToken(Request $request) {
         $encryptedToken = $request['token'];
         // Token has 3 parts:
-        // Door_uuid.Timestamp.Token_value
+        // Door_uuid.Token_value
         $decryptedToken = base64_decode($encryptedToken);
         $deserializedToken = explode('.', $decryptedToken);
+
+
+        // Query database for validaton
+        // Returns a 2D array
+        $validationResult = App\Token::where('door_uuid', $deserializedToken[0])->where('value')->get();
     }
 }
